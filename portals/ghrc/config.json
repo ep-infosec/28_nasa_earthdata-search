@@ -1,0 +1,20 @@
+{
+  "hasStyles": true,
+  "hasScripts": true,
+  "logo": {
+    "id": "ghrc-logo",
+    "link": "https://ghrc.nsstc.nasa.gov/home",
+    "title": "GHRC Home"
+  },
+  "org": "GHRC",
+  "pageTitle": "GHRC",
+  "parentConfig": "edsc",
+  "query": {
+    "dataCenter": "NASA/MSFC/GHRC",
+    "hasGranulesOrCwic": null
+  },
+  "ui": {
+    "showOnlyGranulesCheckbox": false,
+    "showNonEosdisCheckbox": false
+  }
+}

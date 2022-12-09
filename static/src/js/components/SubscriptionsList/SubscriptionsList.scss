@@ -1,0 +1,25 @@
+.subscriptions-list {
+  &__subscription-group {
+    margin-bottom: 3rem;
+  }
+
+  &__spinner {
+    margin: 0 auto;
+  }
+
+  &__button {
+    margin: 0 $spacer/2;
+    color: $color__black--300;
+
+    &--share {
+      i {
+        position: relative;
+        top: 0.0625rem;
+      }
+    }
+
+    &:hover {
+      color: $color__black--600;
+    }
+  }
+}

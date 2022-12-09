@@ -1,0 +1,28 @@
+.panel-section {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: $color__white;
+  z-index: 0;
+  overflow: hidden;
+  opacity: 0;
+
+  &--is-active {
+    z-index: 1;
+    opacity: 1;
+  }
+
+  > * {
+    will-change: opacity;
+    transition: opacity 0.1s ease-out;
+    opacity: 0;
+  }
+
+  .is-panels-dragging & {
+    pointer-events: none;
+    user-select: none;
+  }
+}

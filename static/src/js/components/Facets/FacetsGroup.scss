@@ -1,0 +1,121 @@
+.facets-group {
+  display: block;
+  color: $color__white;
+
+  &__heading {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  &__title {
+    flex-grow: 0;
+    flex-shrink: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__heading-primary {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 1;
+    flex-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &__selected-count {
+    flex-shrink: 0;
+    position: relative;
+    top: 0.01rem;
+    margin-left: 0.5rem;
+    padding: 0 0.5rem;
+    background-color: rgba($color__blue--dark, 0.75);
+    color: $color__white;
+    font-size: 0.625rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    line-height: 1rem;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.425rem 0.5rem;
+    color: $color__white;
+    border-radius: 0;
+    border-bottom: 1px solid darken($color__black--700, 5);
+    font-size: 0.875rem;
+    font-weight: 300;
+
+    .facets-group:first-child & {
+      border-top: 1px solid darken($color__black--700, 5);
+    }
+
+    &:hover {
+      color: $color__white;
+      background: darken($color__black--700, 5);
+    }
+
+    &:focus {
+      outline: 0;
+      border-color: transparent;
+      border-bottom-color: darken($color__black--700, 5);
+    }
+  }
+
+  &__action {
+    align-self: flex-end;
+    color: $color__black--300;
+  }
+
+  &__header {
+    display: flex;
+    padding: 0.2rem 0.5rem 0.2rem 0.7rem;
+  }
+
+  &__meta {
+    font-size: 0.8rem;
+    color: $color__black--400;
+  }
+
+  &__view-all {
+    margin-left: auto;
+    padding: 0;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: $color__black--400;
+    background: none;
+    outline: none;
+    border: 0;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.5rem;
+    color: darken($color__black--400, 10);
+
+    svg {
+      transform: translateY(-0.125rem)
+    }
+  }
+
+  &__body {
+    overflow: hidden;
+    border-bottom: 1px solid darken($color__black--700, 5);
+
+    &:first-child {
+      padding-top: 0.6rem;
+    }
+  }
+}
+

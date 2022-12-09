@@ -1,0 +1,18 @@
+{
+  "hasStyles": true,
+  "logo": {
+    "id": "idn-logo",
+    "link": "https://idn.ceos.org/",
+    "title": "CEOS IDN Search"
+  },
+  "org": "IDN",
+  "pageTitle": "IDN",
+  "parentConfig": "edsc",
+  "query": {
+    "hasGranulesOrCwic": null
+  },
+  "ui": {
+    "showOnlyGranulesCheckbox": false,
+    "showNonEosdisCheckbox": false
+  }
+}

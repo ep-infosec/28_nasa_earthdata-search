@@ -1,0 +1,23 @@
+service: earthdata-search-infrastructure
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  stage: ${opt:stage, 'dev'}
+  region: us-east-1
+  vpc:
+    securityGroupIds:
+      - Ref: LambdaSecurityGroup
+    subnetIds:
+      - ${env:SUBNET_ID_A}
+      - ${env:SUBNET_ID_B}
+
+  deploymentBucket:
+    skipPolicySetup: true
+
+  role: EDSCServerlessAppRole
+
+#
+# AWS Infrastructure Resources
+#
+resources: ${file(./serverless-configs/${self:provider.name}-infrastructure-resources.yml)}

@@ -1,0 +1,110 @@
+{
+  "application": {
+    "version": "dev",
+    "env": "dev",
+    "defaultPortal": "default",
+    "feedbackApp": "",
+    "analytics": {
+      "gtmPropertyId": "",
+      "localIdentifier": {
+        "enabled": false,
+        "propertyId": ""
+      }
+    },
+    "ciMode": false,
+    "cmrTagNamespace": "edsc.extra.serverless",
+    "thumbnailSize": {
+      "height": 85,
+      "width": 85
+    },
+    "orderStatusRefreshTime": 60000,
+    "defaultCmrPageSize": 20,
+    "maxCmrPageSize": 2000,
+    "granuleLinksPageSize": "500",
+    "openSearchGranuleLinksPageSize": "50",
+    "defaultCmrSearchTags": [
+      "edsc.*",
+      "opensearch.granule.osdd"
+    ],
+    "defaultMaxOrderSize": 1000000,
+    "defaultGranulesPerOrder": 2000,
+    "defaultSpatialDecimalSize": 5,
+    "ummGranuleVersion": "1.6.4",
+    "ummServiceVersion": "1.4",
+    "temporalDateFormatFull": "YYYY-MM-DD HH:mm:ss",
+    "temporalDateFormatRange": "MM-DD HH:mm:ss",
+    "minimumTemporalDateString": "1960-01-01 00:00:00",
+    "defaultResponseHeaders": {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "*",
+      "Access-Control-Allow-Credentials": true
+    },
+    "clientId": {
+      "background": "eed-PORTAL-ENV-serverless-background",
+      "client": "eed-PORTAL-ENV-serverless-client",
+      "lambda": "eed-PORTAL-ENV-serverless-lambda"
+    }
+  },
+  "environment": {
+    "test": {
+      "apiHost": "http://localhost:3000",
+      "edscHost": "http://localhost:8080",
+      "jwtToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsImlhdCI6MTU3ODQzMzQ3NiwiZWFydGhkYXRhRW52aXJvbm1lbnQiOiJ0ZXN0In0.WPMuvg26HcYGxGYi7Hl9_FO6YiiJNHWalQ35_1oP5do"
+    },
+    "development": {
+      "dbHost": "127.0.0.1",
+      "dbName": "edsc_dev",
+      "dbPort": 5432,
+      "apiHost": "http://localhost:3001/dev",
+      "edscHost": "http://localhost:8080"
+    },
+    "production": {
+      "apiHost": "http://localhost:3001/dev",
+      "edscHost": "http://localhost:8080"
+    }
+  },
+  "earthdata": {
+    "dev": {},
+    "test": {
+      "cmrHost": "https://cmr.earthdata.nasa.gov",
+      "echoRestRoot": "https://cmr.earthdata.nasa.gov/legacy-services/rest",
+      "edlHost": "https://urs.earthdata.nasa.gov",
+      "csdaHost": "https://auth.csdap.uat.earthdatacloud.nasa.gov",
+      "graphQlHost": "https://graphql.earthdata.nasa.gov",
+      "regionHost": "https://fts.podaac.earthdata.nasa.gov/v1",
+      "opensearchRoot": "https://cmr.earthdata.nasa.gov/opensearch",
+      "redirectUriPath": "/urs_callback"
+    },
+    "sit": {
+      "cmrHost": "https://cmr.sit.earthdata.nasa.gov",
+      "echoRestRoot": "https://cmr.sit.earthdata.nasa.gov/legacy-services/rest",
+      "edlHost": "https://sit.urs.earthdata.nasa.gov",
+      "csdaHost": "https://auth.csdap.uat.earthdatacloud.nasa.gov",
+      "graphQlHost": "https://graphql.sit.earthdata.nasa.gov",
+      "regionHost": "https://fts.podaac.earthdata.nasa.gov/v1",
+      "opensearchRoot": "https://cmr.sit.earthdata.nasa.gov/opensearch",
+      "redirectUriPath": "/urs_callback"
+    },
+    "uat": {
+      "cmrHost": "https://cmr.uat.earthdata.nasa.gov",
+      "echoRestRoot": "https://cmr.uat.earthdata.nasa.gov/legacy-services/rest",
+      "edlHost": "https://uat.urs.earthdata.nasa.gov",
+      "csdaHost": "https://auth.csdap.uat.earthdatacloud.nasa.gov",
+      "graphQlHost": "https://graphql.uat.earthdata.nasa.gov",
+      "regionHost": "https://fts.podaac.earthdata.nasa.gov/v1",
+      "opensearchRoot": "https://cmr.uat.earthdata.nasa.gov/opensearch",
+      "redirectUriPath": "/urs_callback"
+    },
+    "prod": {
+      "cmrHost": "https://cmr.earthdata.nasa.gov",
+      "echoRestRoot": "https://cmr.earthdata.nasa.gov/legacy-services/rest",
+      "edlHost": "https://urs.earthdata.nasa.gov",
+      "csdaHost": "https://auth.csdap.uat.earthdatacloud.nasa.gov",
+      "graphQlHost": "https://graphql.earthdata.nasa.gov",
+      "regionHost": "https://fts.podaac.earthdata.nasa.gov/v1",
+      "opensearchRoot": "https://cmr.earthdata.nasa.gov/opensearch",
+      "redirectUriPath": "/urs_callback"
+    }
+  },
+  "experiments": {}
+}

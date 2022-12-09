@@ -1,0 +1,29 @@
+{
+  "features": {
+    "advancedSearch": false,
+    "authentication": false,
+    "featureFacets": {
+      "showAvailableFromAwsCloud": false,
+      "showCustomizable": false,
+      "showMapImagery": false
+    }
+  },
+  "footer": {
+    "displayVersion": false,
+    "attributionText": "",
+    "primaryLinks": [],
+    "secondaryLinks": []
+  },
+  "hasScripts": false,
+  "hasStyles": false,
+  "logo": {},
+  "org": "Site Name",
+  "pageTitle": "",
+  "query": {},
+  "title": "Search",
+  "ui": {
+    "showOnlyGranulesCheckbox": false,
+    "showNonEosdisCheckbox": false,
+    "showTophat": false
+  }
+}

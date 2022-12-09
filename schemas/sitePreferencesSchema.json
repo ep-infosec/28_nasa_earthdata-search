@@ -1,0 +1,186 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema",
+	"type": "object",
+	"title": "Preferences",
+	"additionalProperties": false,
+	"required": [
+		"panelState",
+		"collectionListView",
+		"granuleListView"
+  ],
+	"properties": {
+		"collectionSort": {
+			"$id": "#/properties/collectionSort",
+			"type": "string",
+			"title": "Collection Results Sort",
+			"description": "Select your preference for the sorting key used in the collection results panel when you are logged into Earthdata Search.",
+			"default": "default",
+			"enum": [
+				"default",
+				"relevance",
+				"-usage_score",
+				"-ongoing"
+			],
+			"enumNames": [
+				"Default",
+				"Relevance",
+				"Usage",
+				"End Date"
+			]
+		},
+		"granuleSort": {
+			"$id": "#/properties/granuleSort",
+			"type": "string",
+			"title": "Granule Results Sort",
+			"description": "Select your preference for the sorting key used in the granule results panel when you are logged into Earthdata Search.",
+			"default": "default",
+			"enum": [
+				"default",
+				"-start_date",
+				"start_date",
+				"-end_date",
+				"end_date"
+			],
+			"enumNames": [
+				"Default",
+				"Start Date, Newest First",
+				"Start Date, Oldest First",
+				"End Date, Newest First",
+				"End Date, Oldest First"
+			]
+		},
+		"panelState": {
+			"$id": "#/properties/panelState",
+			"type": "string",
+			"title": "Panel State",
+			"description": "Select your preference for the state of the main panel when you are logged into Earthdata Search. Collapsed maximizes usable map space on the initial load. Open allows for panel and map interactions. Full Width uses the full width of your browser for search results.",
+			"default": "default",
+			"enum": [
+				"default",
+				"collapsed",
+				"open",
+				"fullWidth"
+			],
+			"enumNames": [
+				"Default",
+				"Collapsed",
+				"Open",
+				"Full Width"
+			]
+		},
+		"collectionListView": {
+			"$id": "#/properties/collectionListView",
+			"type": "string",
+			"title": "Collection Search Results View",
+			"description": "Set a default view for collection search results.",
+			"default": "default",
+			"enum": [
+				"default",
+				"list",
+				"table"
+			],
+			"enumNames": [
+				"Default",
+				"List",
+				"Table"
+			]
+		},
+		"granuleListView": {
+			"$id": "#/properties/granuleListView",
+			"type": "string",
+			"title": "Granule Search Results View",
+			"description": "Set a default view for granule search results.",
+			"default": "default",
+			"enum": [
+				"default",
+				"list",
+				"table"
+			],
+			"enumNames": [
+				"Default",
+				"List",
+				"Table"
+			]
+    },
+    "mapView": {
+      "$id": "#/properties/mapView",
+      "type": "object",
+      "title": "Default Map View",
+      "description": "Set a default view for the map.",
+      "properties": {
+        "latitude": {
+          "type": "number",
+          "title": "Latitude",
+          "description": "Centers the map in your window over this latitude.",
+          "minimum": -90,
+          "maximum": 90,
+          "default": 0
+        },
+        "longitude": {
+          "type": "number",
+          "title": "Longitude",
+          "description": "Centers the map in your window over this longitude.",
+          "minimum": -180,
+          "maximum": 180,
+          "default": 0
+        },
+        "zoom": {
+          "type": "number",
+          "title": "Zoom",
+          "minimum": 0,
+          "maximum": 7,
+          "default": 2
+        },
+        "projection": {
+          "type": "string",
+          "title": "Projection",
+          "default": "epsg4326",
+          "enum": [
+            "epsg4326",
+            "epsg3413",
+            "epsg3031"
+          ],
+          "enumNames": [
+            "Geographic",
+            "Arctic",
+            "Antarctic"
+          ]
+        },
+        "baseLayer": {
+          "type": "string",
+          "title": "Base Layer",
+          "default": "blueMarble",
+          "enum": [
+            "blueMarble",
+            "trueColor",
+            "landWaterMap"
+          ],
+          "enumNames": [
+            "Blue Marble",
+            "Corrected Reflectance (True Color)",
+            "Land / Water Map"
+          ]
+        },
+        "overlayLayers": {
+          "type": "array",
+          "title": "Overlay Layers",
+          "default": ["referenceFeatures", "referenceLabels"],
+          "items": {
+            "type": "string",
+            "enum": [
+              "referenceFeatures",
+              "coastlines",
+              "referenceLabels"
+            ],
+            "enumNames": [
+              "Borders and Roads",
+              "Coastlines",
+              "Place Labels"
+            ]
+          },
+          "uniqueItems": true
+        }
+      }
+    }
+	}
+}

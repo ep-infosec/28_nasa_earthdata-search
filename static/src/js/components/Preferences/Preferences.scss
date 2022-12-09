@@ -1,0 +1,13 @@
+.preferences {
+  border-radius: 5px;
+  padding: 30px;
+  border-color: #e3e3e3;
+  color: #333333;
+
+  &__loading {
+    min-height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

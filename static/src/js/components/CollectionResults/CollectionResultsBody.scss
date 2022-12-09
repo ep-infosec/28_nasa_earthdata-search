@@ -1,0 +1,39 @@
+.collection-results-body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  &__view-enter {
+    display: block;
+    visibility: visible;
+    opacity: 0;
+  }
+
+  &__view-enter-active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 200ms;
+  }
+
+  &__view-enter-done {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__view-exit {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__view-exit-active {
+    opacity: 0;
+    transition: opacity 200ms;
+  }
+
+  &__view-exit-done {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

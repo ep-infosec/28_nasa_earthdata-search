@@ -1,0 +1,6 @@
+{
+  "parentConfig": "edsc",
+  "query": {
+    "echoCollectionId": "C203234523-LAADS"
+  }
+}

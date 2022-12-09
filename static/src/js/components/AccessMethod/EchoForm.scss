@@ -1,0 +1,27 @@
+#root {
+  .tree-item__parent-button {
+    &.btn {
+      height: 1.5rem;
+    }
+
+    svg {
+      vertical-align: initial;
+    }
+  }
+}
+
+.echoform {
+  .card {
+    background-color: transparent;
+  }
+
+  & > .card {
+    border: 0;
+    background-color: transparent;
+  }
+
+  .form__body {
+    border: 0;
+    padding: 0;
+  }
+}

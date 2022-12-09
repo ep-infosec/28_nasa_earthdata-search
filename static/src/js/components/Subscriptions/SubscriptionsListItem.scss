@@ -1,0 +1,44 @@
+.subscriptions-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid $color__black--200;
+
+  &__primary {
+    flex-shrink: 1;
+    flex-grow: 1;
+    min-width: 0;
+  }
+
+  &__name {
+    margin: 0;
+    font-weight: 500;
+    font-size: 0.825rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__meta {
+    display: block;
+    font-size: 0.75rem;
+    color: $color__black--500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__actions {
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+
+  &__action {
+    margin-left: 0.5rem;
+  }
+
+  &__tooltip {
+    width: 15rem;
+  }
+}
